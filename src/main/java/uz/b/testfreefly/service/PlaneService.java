@@ -13,9 +13,9 @@ public class PlaneService extends Service<PlaneDAO> {
     }
 
     public void create(@NonNull PlaneDTO planDTO) {
-        Plane plane = dao.findPlaneByName(planDTO.getName()).orElseThrow(() -> {
-            throw new BadRequestException("alredy token this name");
-        });
+        if(dao.findPlaneByName(planDTO.getName()).isEmpty()){
+            throw new BadRequestException("this name already token");
+        }
         Plane plane1=planDTO.toPlane();
         dao.create(plane1);
     }

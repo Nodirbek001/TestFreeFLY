@@ -32,7 +32,7 @@ public class PlaneDAO implements Dao<Plane> {
     @Override
     public List<Plane> findAll() {
         Session session = HibernateConfigurer.getSession();
-        return session.createQuery("from Plane", Plane.class).getResultList();
+        return session.createQuery("select t from Plane t", Plane.class).getResultList();
     }
 
     @Override
