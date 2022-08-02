@@ -21,10 +21,10 @@ public class Users {
     private Role role;
     private double balance;
 
+    private String email;
 
-
-    public enum Role{
-        DIRECTOR,MANAGER,USER,TICKETMAN;
+    public enum Role {
+        DIRECTOR, MANAGER, USER, TICKETMAN;
     }
 }
 

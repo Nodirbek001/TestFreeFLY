@@ -9,34 +9,34 @@
 <html>
 <jsp:include page="../fragments/head.jsp"/>
 <body>
-<%--<div class="row">--%>
-<%--  <div class="col-6 offset-3">--%>
-<%--    <form method="post">--%>
-<%--      <div class="form-group">--%>
-<%--        <label for="fullName">F.I.O</label>--%>
-<%--        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="F.I.O" >--%>
-<%--      </div>--%>
-<%--      <div class="form-group">--%>
-<%--        <label for="username">Username</label>--%>
-<%--        <input type="text" class="form-control" id="username" name="username" placeholder="John Doe">--%>
-<%--      </div>--%>
-<%--      <div class="form-group">--%>
-<%--        <label for="password">Password</label>--%>
-<%--        <input type="password" class="form-control" id="password" name="password">--%>
-<%--      </div>--%>
-<%--      <div class="form-group">--%>
-<%--        <label for="confirmPassword">Confirm Password</label>--%>
-<%--        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">--%>
-<%--      </div>--%>
-<%--      <div class="form-group">--%>
-<%--        <label for="email">Email</label>--%>
-<%--        <input type="text" class="form-control" id="email" name="email" placeholder="email@gmail.com" >--%>
-<%--      </div>--%>
-<%--      <button type="submit" class="btn btn-success">Register</button>--%>
-<%--      <a href="/auth/login" class="btn btn-primary">Login</a>--%>
-<%--    </form>--%>
-<%--  </div>--%>
-<%--</div>--%>
-<%--<jsp:include page="../fragments/js.jsp"/>--%>
+<div class="row">
+  <div class="col-6 offset-3">
+    <form method="post">
+      <div class="form-group">
+        <label for="fullName">F.I.O</label>
+        <input type="text" class="form-control" id="fullName" name="fullName" placeholder="F.I.O" >
+      </div>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" placeholder="John Doe">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="email@gmail.com" >
+      </div>
+      <button type="submit" class="btn btn-success">Register</button>
+      <a href="/auth/login" class="btn btn-primary">Login</a>
+    </form>
+  </div>
+</div>
+<jsp:include page="../fragments/js.jsp"/>
 </body>
 </html>

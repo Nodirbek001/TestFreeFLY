@@ -27,6 +27,7 @@ public class RegisterServlet extends HttpServlet {
                 .username(req.getParameter("username"))
                 .password(req.getParameter("password"))
                 .confirmPassword(req.getParameter("confirmPassword"))
+                .email(req.getParameter("email"))
                 .build();
         userService.create(registerDTO);
         resp.sendRedirect(" /auth/login");
