@@ -14,16 +14,15 @@ import java.util.List;
 @ToString
 @Entity
 public class Airport {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     @OneToOne
     private Users director;
-    @ManyToAny
+    @OneToMany
     private List<Users> managers;
-    @ManyToAny
+    @OneToMany
     private List<Plane> plane;
 
 }

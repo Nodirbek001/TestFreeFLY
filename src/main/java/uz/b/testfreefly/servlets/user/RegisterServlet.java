@@ -1,8 +1,7 @@
 package uz.b.testfreefly.servlets.user;
 
 import uz.b.testfreefly.container.ApplicationContext;
-import uz.b.testfreefly.dao.UserDAO;
-import uz.b.testfreefly.dto.RegisterDTO;
+import uz.b.testfreefly.dto.user.RegisterDTO;
 import uz.b.testfreefly.service.UserService;
 
 import javax.servlet.ServletException;

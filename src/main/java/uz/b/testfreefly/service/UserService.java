@@ -3,8 +3,8 @@ package uz.b.testfreefly.service;
 import lombok.NonNull;
 import uz.b.testfreefly.dao.UserDAO;
 import uz.b.testfreefly.domains.Users;
-import uz.b.testfreefly.dto.LoginDTO;
-import uz.b.testfreefly.dto.RegisterDTO;
+import uz.b.testfreefly.dto.user.LoginDTO;
+import uz.b.testfreefly.dto.user.RegisterDTO;
 import uz.b.testfreefly.exceptions.BadRequestException;
 import uz.b.testfreefly.util.Utils;
 
@@ -45,6 +45,14 @@ public class UserService extends Service<UserDAO>{
         }
         return user;
     }
+    public Users findUserByUsername(String username){
+        Users users=dao.findByUsername(username).orElseThrow(()->{
+            throw new BadRequestException("Not found User");
+        });
+        return users;
+    }
+
+
 
 
 }

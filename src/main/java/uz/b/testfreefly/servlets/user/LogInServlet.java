@@ -2,7 +2,7 @@ package uz.b.testfreefly.servlets.user;
 
 import uz.b.testfreefly.container.ApplicationContext;
 import uz.b.testfreefly.domains.Users;
-import uz.b.testfreefly.dto.LoginDTO;
+import uz.b.testfreefly.dto.user.LoginDTO;
 import uz.b.testfreefly.service.UserService;
 
 import javax.servlet.ServletException;
@@ -16,9 +16,10 @@ import java.io.IOException;
 @WebServlet("/auth/login")
 public class LogInServlet extends HttpServlet {
     public final UserService userService = ApplicationContext.getBean(UserService.class);
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/views/auth/login.jsp").forward(req,resp);
+        req.getRequestDispatcher("/views/auth/login.jsp").forward(req, resp);
     }
 
     @Override
@@ -28,12 +29,8 @@ public class LogInServlet extends HttpServlet {
                 .password(req.getParameter("password"))
                 .build();
         Users login = userService.login(loginDTO);
-        HttpSession session=req.getSession();
-        session.setAttribute("userId",login.getId());
-
-
-
-
+        HttpSession session = req.getSession();
+        session.setAttribute("userId", login.getId());
         resp.sendRedirect("/");
     }
 }

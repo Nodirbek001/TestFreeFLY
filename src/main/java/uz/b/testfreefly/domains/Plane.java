@@ -20,6 +20,6 @@ public class Plane {
     private String name;
     @OneToOne
     private Airport airport;
-    @ManyToAny
-    private List<Flight> flight;
+    @OneToOne
+    private Flight flight;
 }

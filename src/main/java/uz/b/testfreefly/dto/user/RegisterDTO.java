@@ -1,4 +1,4 @@
-package uz.b.testfreefly.dto;
+package uz.b.testfreefly.dto.user;
 
 import lombok.*;
 import uz.b.testfreefly.domains.Users;

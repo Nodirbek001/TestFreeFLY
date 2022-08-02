@@ -7,7 +7,7 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Environment;
-import uz.b.testfreefly.domains.Users;
+import uz.b.testfreefly.domains.*;
 
 import java.util.Objects;
 import java.util.Properties;
@@ -59,6 +59,10 @@ public class HibernateConfigurer {
 
 
                 sources.addAnnotatedClass(Users.class);
+                sources.addAnnotatedClass(Airport.class);
+                sources.addAnnotatedClass(Flight.class);
+                sources.addAnnotatedClass(Luggage.class);
+                sources.addAnnotatedClass(Plane.class);
 
 
 
