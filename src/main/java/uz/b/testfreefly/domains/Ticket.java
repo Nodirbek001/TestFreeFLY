@@ -5,21 +5,21 @@ import lombok.*;
 import org.hibernate.annotations.ManyToAny;
 
 import java.util.List;
-
 @Getter
 @Setter
-@NoArgsConstructor
 @AllArgsConstructor
-@Builder
+@NoArgsConstructor
 @ToString
+@Builder
 @Entity
-public class Plane {
+public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    @OneToOne
-    private Airport airport;
     @ManyToAny
-    private List<Flight> flight;
+    private List<Users> users;
+    @ManyToOne
+    private TicketForm ticketForm;
+    private String from;
+    private String to;
 }

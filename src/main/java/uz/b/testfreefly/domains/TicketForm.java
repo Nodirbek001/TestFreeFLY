@@ -1,8 +1,6 @@
 package uz.b.testfreefly.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -11,12 +9,14 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @ToString
+@Entity
 public class TicketForm {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Double price;
-    private Integer user_coordinate;
-    private Users user;
+    @OneToOne
+    private Flight flight;
+    private int price;
+    private int capacity;
 
 }

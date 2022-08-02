@@ -1,8 +1,6 @@
 package uz.b.testfreefly.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Timestamp;
@@ -13,16 +11,14 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 @ToString
+@Entity
 public class Flight {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long plane_id;
+    @OneToOne
+    private Plane plane;
     private Integer user_capacity;
     private String from;
     private String to;
-    private Timestamp begin;
-    private Timestamp end;
-
-
 }
