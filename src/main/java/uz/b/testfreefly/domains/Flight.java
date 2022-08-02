@@ -21,4 +21,6 @@ public class Flight {
     private Integer user_capacity;
     private String from;
     private String to;
+    private Timestamp begin;
+    private Timestamp end;
 }

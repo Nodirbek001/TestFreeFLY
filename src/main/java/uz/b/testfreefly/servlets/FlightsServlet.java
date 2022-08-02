@@ -15,6 +15,5 @@ public class FlightsServlet extends HttpServlet {
 
     }
 
-    public static class LogOutServlet {
-    }
+
 }
