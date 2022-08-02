@@ -29,8 +29,14 @@ public class LogInServlet extends HttpServlet {
                 .password(req.getParameter("password"))
                 .build();
         Users login = userService.login(loginDTO);
-        HttpSession session = req.getSession();
-        session.setAttribute("userId", login.getId());
-        resp.sendRedirect("/");
+        HttpSession session=req.getSession();
+        session.setAttribute("userId",login.getId());
+        Users.Role userRole = login.getRole();
+        switch (userRole){
+            case USER -> resp.sendRedirect("/");
+            case MANAGER -> resp.sendRedirect("/managerpage");
+            case DIRECTOR -> req.getRequestDispatcher("/views/auth/director.jsp").forward(req,resp);
+            case TICKETMAN -> resp.sendRedirect("/ticketmanpage");
+        }
     }
 }
