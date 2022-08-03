@@ -18,7 +18,6 @@ public class Flight {
     private Long id;
     @OneToOne
     private Plane plane;
-    private Integer user_capacity;
     private String from;
     private String to;
     private Timestamp begin;

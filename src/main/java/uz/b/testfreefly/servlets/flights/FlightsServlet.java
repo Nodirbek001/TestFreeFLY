@@ -1,4 +1,4 @@
-package uz.b.testfreefly.servlets;
+package uz.b.testfreefly.servlets.flights;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
